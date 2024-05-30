@@ -1,0 +1,45 @@
+
+/* Añade esto a tu App.css si estás usando Tailwind CSS */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personaliza estilos adicionales si es necesario */
+html, body {
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(31, 41, 55, 0.8); /* bg-gray-800 with transparency */
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  @apply hover:text-gray-300;
+}
+
+.product-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105;
+}
+
+.product-image {
+  @apply w-full h-64 object-cover object-center;
+}
+
+@media (max-width: 768px) {
+  .text-4xl {
+    @apply text-3xl;
+  }
+
+  .container {
+    @apply px-4;
+  }
+}
+
+
+
+
